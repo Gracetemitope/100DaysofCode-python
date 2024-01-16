@@ -22,15 +22,15 @@ print(r"""\                /\      /\
 print("Welcome to Treasure Island.\nYour mission is to find the treasure")
 
 # Choose a direction
-direction = input("Please choose a direction. Left or Right?\n").lower()
+direction = input("Please choose a direction. Left or Right?\n")
+
 # swim_wait = input("Do you want to swim or wait?/n")
 # door = input("Which door do you want to go? Read, Blue, Yellow ")
-
-if str(direction) == "Left":
-    swim_wait = input("Do you want to swim or wait?\n").lower()
-    if str(swim_wait) == "wait":
-        door = input("Which door do you want to go? Red, Blue, Yellow ").lower()
-        if str(door) == "Blue":
+if str(direction).lower() == "left":
+    swim_wait = input("Do you want to swim or wait?\n")
+    if str(swim_wait).lower() == "wait":
+        door = input("Which door do you want to go? Red, Blue, Yellow ")
+        if str(door).lower() == "Blue":
             print("You have been eaten by beasts. Game Over!!!")
         elif str(door) == "Red":
             print("You have been burned by fire. Game over!!!")
