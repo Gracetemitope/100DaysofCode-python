@@ -25,14 +25,23 @@ print(rock)
 print(scissor)
 print(paper)
 
-player_choice = random.randint(0, 2)
+
+# player_choice = random.randint(0, 2)
 computer_choice = random.randint(0, 2)
+print(computer_choice)
+
+player_choice = input("Please select a weapon. 0 for rock, 1 for Paper and 2 for Scissor ")
+player_choice = int(player_choice)
 print(player_choice)
 print(computer_choice)
 
-choosing_a_weapon = input("Please select a weapon. 0 for rock, 1 for Paper and 2 for Scissor ")
-
-if player_choice == 0 & computer_choice == 1:
+if player_choice == 0 and computer_choice == 1:
     print(f"Computer chose{paper}\nand you have chosen {rock}. Congratulations, you have won")
+elif player_choice == 1 and computer_choice == 2:
+    print(f"Computer chose{scissor}\nand you have chosen {paper}. oops! You lost and computer won!")
+elif player_choice == 2 and computer_choice == 0:
+        print(f"Computer chose{rock}\nand you have chosen {scissor}. oops! You lost and computer won!")
+elif player_choice == computer_choice:
+     print("That is smart! I give it to you!")
 else:
     print("Today is not your day")
